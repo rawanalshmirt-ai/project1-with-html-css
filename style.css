@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(#0c3877,#41012d);
+    height: 100vh;
+    font-family: system-ui;
+}
+section{
+    background: url('WhatsApp Image 2026-05-09 at 4.30.42 PM.png');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul{
+    text-align: center;
+}
+ul:hover li a{
+    opacity: 0;
+
+}
+ul li{
+    list-style: none;
+    margin: 14px 0;
+}
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background: rgb(135, 22, 92);
+    padding: 13px 19px;
+    border-radius: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 125px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 10;
+}
+ul li a:hover{
+    transform: scale(1.5);
+    background: rgb(245, 96, 215);
+    opacity: 1;
+}
+ul li::after{
+    content: attr(data-text);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    letter-spacing: 50px;
+    pointer-events: none;
+    transition: 0.5;
+    
+}
+ul li:hover::after{
+    opacity:0.5;
+    letter-spacing: 5px;
+
+}
